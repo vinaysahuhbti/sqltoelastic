@@ -17,19 +17,19 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.vs.bean.Parent;
-import com.vs.repo.S2MRepo;
+import com.vs.repo.S2ERepo;
 import com.vs.util.Messages;
 import com.vs.util.ResultSetConvertor;
 
 @EnableScheduling
 @Service
-public class S2MService<T extends Parent> {
+public class S2EService<T extends Parent> {
 
 	@Autowired
 	DataSource datasource;
 
 	@Autowired
-	private S2MRepo<Parent> s2mrepo;
+	private S2ERepo<Parent> s2erepo;
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -53,7 +53,7 @@ public class S2MService<T extends Parent> {
 			public void processRow(ResultSet rs) throws SQLException {
 				while (rs.next()) {
 					Parent obj = convertor.convert(rs);
-					s2mrepo.save(obj);
+					s2erepo.save(obj);
 					recorddone.incrementAndGet();
 				}
 			}

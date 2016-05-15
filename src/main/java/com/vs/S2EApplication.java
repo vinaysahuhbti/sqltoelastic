@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
-public class S2MApplication {
+public class S2EApplication {
 
 	@Autowired
 	DataSource datasource;
@@ -22,6 +22,6 @@ public class S2MApplication {
 	}
 	
 	public static void main(String[] args) {
-		SpringApplication.run(S2MApplication.class, args);
+		SpringApplication.run(S2EApplication.class, args);
 	}
 }

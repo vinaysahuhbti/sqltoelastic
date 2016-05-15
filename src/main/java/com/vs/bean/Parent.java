@@ -1,8 +1,8 @@
 package com.vs.bean;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document
+@Document(indexName = "doc", type="dev")
 public interface Parent {
 
 }
