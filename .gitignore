@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+*.iml
+.idea/
+target/
+src/main/java/com/til/canvasmaker/xsddto/
+.DS_Store
+.settings/
+.project
+logs/
+.classpath
+bin/
+.springBeans
